@@ -101,15 +101,4 @@ public class MinecraftHook {
 		}
 	}
 	
-	public void joyMessageFunction()
-	{
-		try
-		{
-			Minecraft.getMinecraft().thePlayer.sendChatMessage("/msg joy Welcome Back!!");
-			Minecraft.getMinecraft().thePlayer.playSound("random.chestclosed", 1, 1);
-		}catch(Exception e)
-		{
-			
-		}
-	}
 }
