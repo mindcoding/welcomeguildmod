@@ -20,7 +20,7 @@ public class MinecraftHook {
 		{
 			if(!Minecraft.getMinecraft().getCurrentServerData().serverMOTD.toLowerCase().contains("hypixel"))
 			{
-				return;
+				//return;
 			}
 		}catch(Exception e)
 		{
