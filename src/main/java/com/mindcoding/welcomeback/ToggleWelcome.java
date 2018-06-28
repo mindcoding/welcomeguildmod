@@ -9,31 +9,26 @@ import net.minecraft.util.ChatStyle;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IChatComponent;
 
-public class ToggleWelcome extends CommandBase implements ICommand
-{
+public class ToggleWelcome extends CommandBase implements ICommand {
 	@Override
-	public String getCommandName()
-	{
+	public String getCommandName() {
 		return "togglewelcome";
 	}
-	
+
 	@Override
-    public boolean canCommandSenderUseCommand(ICommandSender sender)
-    {
-        return true;
-    }
-	
+	public boolean canCommandSenderUseCommand(ICommandSender sender) {
+		return true;
+	}
+
 	@Override
-	public void processCommand(ICommandSender ics, String[] args) throws CommandException
-	{
+	public void processCommand(ICommandSender ics, String[] args) throws CommandException {
 		MinecraftHook.welcomeEnabled = !MinecraftHook.welcomeEnabled;
-		if(MinecraftHook.welcomeEnabled)
-			ics.addChatMessage(new ChatComponentText("Welcome messages are now enabled")					.setChatStyle(new ChatStyle()
-					.setColor(EnumChatFormatting.GREEN)));
-		else
-		{
-			ics.addChatMessage(new ChatComponentText("Welcome messages are now disabled")					.setChatStyle(new ChatStyle()
-					.setColor(EnumChatFormatting.RED)));		
+		if (MinecraftHook.welcomeEnabled)
+			ics.addChatMessage(new ChatComponentText("Welcome messages are now enabled")
+					.setChatStyle(new ChatStyle().setColor(EnumChatFormatting.GREEN)));
+		else {
+			ics.addChatMessage(new ChatComponentText("Welcome messages are now disabled")
+					.setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
 		}
 	}
 

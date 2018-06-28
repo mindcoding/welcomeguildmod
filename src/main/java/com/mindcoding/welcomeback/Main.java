@@ -16,14 +16,6 @@ public class Main
     public static final String VERSION = "0.01";
     public static final String NAME = "Welcome Back Guild Mod";
     
-    
-    @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent event) {
-
-
-    }
-    
-    
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
